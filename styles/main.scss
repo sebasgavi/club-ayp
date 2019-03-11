@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,800');
+
+@import 'variables';
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: $primary-font;
+    font-weight: 400;
+}
