@@ -2,12 +2,38 @@
 
 @import 'variables';
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     font-family: $primary-font;
     font-weight: 400;
+}
+
+
+.testimonials {
+
+
+    .title-section {
+        font-family: $primary-font;
+        font-weight: 800;
+    }
+
+    .testimonials-group {
+
+        
+        flex-direction: row;
+
+        .testimony {
+
+            
+
+            .img-rounded {
+                border-radius: 150px;
+            }
+
+        }
+    }
 }
