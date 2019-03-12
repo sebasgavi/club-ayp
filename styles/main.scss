@@ -10,4 +10,54 @@ body{
     margin: 0;
     font-family: $primary-font;
     font-weight: 400;
+    overflow: hidden;
+}
+
+// ------------------------ CARDS ---------------------------
+
+#cards{
+    width: 100vw;
+    height: 100vh;
+    
+    .cards-container{
+        background-color: $blue;
+        position: relative;
+        margin: auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: row wrap;
+        
+        .card{
+            border-radius: 15px;
+            background-color: $red;
+            width: 400px;
+            height: 700px;
+
+            display: flex;
+            flex-flow: column nowrap;
+
+            .img-container{
+                flex: 1;
+            }
+
+            .info-container{
+                background-color: $yellow;
+                flex: 1;
+                //padding: 2rem;
+                display: flex;
+                flex-flow: column nowrap;
+                
+                p{
+                    flex: 2;
+                    padding: 2rem;
+                }
+                a{ 
+                    flex: 1;
+                    position: relative;
+                    margin: auto;
+                }
+            }
+        }
+    }
 }
