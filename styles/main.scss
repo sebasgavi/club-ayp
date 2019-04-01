@@ -30,10 +30,10 @@ body {
 
         .card {
             border-radius: 15px;
-            //background-color: $red;
+            background-color: #f8f8f8;
             width: 400px;
             height: 700px;
-            border: 1px solid $yellow;
+            //border: 1px solid $yellow;
 
             display: flex;
             flex-flow: column nowrap;
@@ -86,7 +86,7 @@ body {
 
             &:hover {
                 position: relative;
-                box-shadow: 0px 0px 30px #c0c0c0;
+                box-shadow: 0px 0px 15px #dddddd;
             }
         }
     }
