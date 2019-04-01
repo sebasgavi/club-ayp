@@ -2,6 +2,7 @@
 
 @import "variables";
 @import "banner";
+@import "cards";
 
 * {
     box-sizing: border-box;
@@ -14,81 +15,3 @@ body {
     // overflow: hidden;
 }
 
-// ------------------------ CARDS ---------------------------
-
-#cards {
-    width: 100vw;
-    height: 100vh;
-
-    .cards-container {
-        //background-color: $blue;
-        position: relative;
-        margin: auto;
-        width: 80%;
-        display: flex;
-        justify-content: space-evenly;
-        flex-flow: row wrap;
-
-        .card {
-            border-radius: 15px;
-            background-color: #f8f8f8;
-            width: 400px;
-            height: 700px;
-            //border: 1px solid $yellow;
-
-            display: flex;
-            flex-flow: column nowrap;
-
-            transition: all 0.3s;
-
-            .img-container {
-                flex: 1;
-
-                img {
-
-                    border-radius: 15px 15px 0 0;
-                }
-            }
-
-            .info-container {
-                //background-color: $yellow;
-                flex: 1;
-                //padding: 2rem;
-                display: flex;
-                flex-flow: column nowrap;
-
-                .project-info {
-                    padding: 2rem;
-                }
-
-                .btn {
-                    position: relative;
-                    margin: auto;
-                    border-radius: 32px;
-                    background-color: $yellow;
-                    display: inline-block;
-                    color: #ffffff;
-                    font-family: $primary-font;
-                    font-size: 14px;
-                    padding: 10px 30px;
-                    text-decoration: none;
-
-                    transition: all 0.3s;
-
-                    &:hover {
-                        background-color: $orange;
-                    }
-
-                    &:active {
-                        top: 1px;
-                    }
-                }
-            }
-
-            &:hover {
-                position: relative;
-                box-shadow: 0px 0px 15px #dddddd;
-            }
-        }
-    }
-}
