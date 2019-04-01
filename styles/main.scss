@@ -2,6 +2,7 @@
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import "variables";
 @import "navegacion";
+@import "testimonials";
 @import "banner";
 @import "cards";
 
@@ -45,41 +46,4 @@ html{
 
 
 
-    .testimonials-group {
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        
-
-        .testimony {
-
-
-
-            width: 18%;
-
-            
-
-            .img-rounded {
-                border-radius: 150px;
-                background-color: $orange;
-                
-            }
-
-            p{
-                height: 20px;
-                overflow: hidden;
-                transition:  height 2s;
-                transition-timing-function: ease;
-                background-color: $red;
-            }
-
-            &:hover{
-                p{
-                    height: 400px;
-           
-                }
-            }
-
-        }
-    }
+ 
