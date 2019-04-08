@@ -18,7 +18,7 @@ html, body{
     background-image: url('https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     font-family: $primary-font;
     font-weight: 400;
-    height: 100%;
+    height: 100vh;
     background-size: cover;
     @include centrar();
     flex-direction: column;

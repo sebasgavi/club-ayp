@@ -30,6 +30,7 @@ html{
 
 .container{
     width: 1200px;
+    max-width: 100%;
     margin: auto;
     justify-content: center;
     margin-top: 10%;
@@ -38,11 +39,11 @@ html{
 }
 
 
-    .title-section {
-        font-family: $primary-font;
-        font-weight: 800;
-        margin-bottom: 100px;
-    }
+.title-section {
+    font-family: $primary-font;
+    font-weight: 800;
+    margin-bottom: 100px;
+}
 
 
 
