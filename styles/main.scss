@@ -43,8 +43,21 @@ html{
     font-family: $primary-font;
     font-weight: 800;
     margin-bottom: 100px;
+    font-size: 3em;
 }
 
 
+.row{
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
 
+    &__column{
+        flex-shrink: 1;
+        flex-grow: 1;
+        flex-basis: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
  
