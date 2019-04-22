@@ -1,0 +1,169 @@
+.footer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100vw;
+
+    &__main-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 2em 0;
+        background-color: $light-gray-3;
+        
+        &__newsletter {
+            display: flex;
+            flex-flow: column nowrap;   
+            width: 60%;
+    
+            &__p {
+                margin: 0 0 .5em 0;
+                font-size: 1.2em;
+                color: black;
+            }
+    
+            &__form {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                width: 100%;
+    
+                &__email-field {
+                    width: 50%;
+                    margin: 0 1em 0 0;
+                    padding: 1em;
+                    border: none;
+                    font-size: .7em;
+                    transition: all .2s ease-out;
+                }
+        
+                &__email-field:focus {
+                    outline: none;
+                    border: .1px solid $dark-gray-2; 
+                }
+        
+                &__submit-button {
+                    width: 20%;
+                    padding: 1em;
+                    background-color: $purple;
+                    color: white;
+                    font-size: .7em;
+                }
+
+                &__submit-button:hover {
+                    transition: all .1s ease-in;
+                    transform: scale(1.05);
+                }
+
+                &__submit-button:focus {
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+    
+        &__powered-by {        
+            display: flex;
+            flex-flow: column nowrap;
+            width: 30%;
+    
+            &__title {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                width: 100%;
+    
+                &__p {
+                    margin: 0;
+                    color: $dark-gray-2;
+                    font-size: .8em;
+                }
+            }
+    
+            &__divider {
+                width: 100%;
+                margin: .5em 0 1em 0;
+            }
+    
+            &__developer {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+    
+                &__image {
+                    box-sizing: border-box;
+                    width: 50px;
+                    height: 50px;
+                    margin: 0 1em 0 0;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%; 
+                    }
+                }
+        
+                &__name {
+                    margin: 0;
+                    color: black;
+                    font-size: 1em;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &__social-media {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding: .5em 2em;
+        background-color: $light-gray-1;
+
+        &__title {
+            margin: 0 1em 0 0;
+
+            &__p {
+                font-size: .8em;
+                color: black;
+            }
+        }
+
+        &__item-container {
+            display: flex;
+            flex-flow: row nowrap;
+
+            &__item {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                padding: .4em;
+                border-radius: 50%;
+                background-color: $purple;
+    
+                &__img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &__item:first-child {
+                margin: 0 .5em 0 0;
+            }
+
+            &__item:hover {
+                transition: all .1s ease-in;
+                transform: scale(1.05);
+            }
+        }
+
+    }
+}
