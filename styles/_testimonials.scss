@@ -1,0 +1,26 @@
+@import "variables";
+
+.testimony {
+
+    .img-rounded {
+        border-radius: 150px;
+        background-color: $orange;
+        width: 100%;
+    }
+
+    p{
+        height: 20px;
+        overflow: hidden;
+        transition:  height 2s;
+        transition-timing-function: ease;
+        background-color: $red;
+    }
+
+    &:hover{
+        p{
+            height: 400px;
+    
+        }
+    }
+
+}

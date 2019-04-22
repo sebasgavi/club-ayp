@@ -1,0 +1,71 @@
+@import 'variables';
+
+@mixin centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+   // background-color: black;
+}
+
+.banner{
+    background-image: url('https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    font-family: $primary-font;
+    font-weight: 400;
+    height: 100vh;
+    background-size: cover;
+    @include centrar();
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: .8;
+    padding: 0 5%;
+    color: white;
+    //transition: .3s linear .5s;
+
+    &__contenedor{
+
+        margin: 0;
+        background-color: rgba($color: $primary, $alpha: .7);
+        width: 60%;
+        padding: 2% 5%;
+        text-align: right;
+        display: flex;
+        @include centrar();
+        flex-direction: column;
+        align-items: flex-end;
+
+        &__titulo{
+            opacity: 1;
+            font-size: 250%;
+            //background-color: $orange;
+            width: 100%;
+            padding: .2em;
+            font-weight: 100;
+        }
+    
+        &__parrafo{
+            opacity: 1;
+            width: 100%;
+            font-size: 130%;
+        }
+
+        &__boton{
+            background-color: $orange;
+            width: 20%;
+            padding: 1em;
+            margin-top: 4em;
+            font-size: 110%;
+            font-weight: 500;
+            @include centrar();
+
+            box-shadow: 16px 14px 63px -9px rgb(0,0,0);
+        }
+    }
+
+}
