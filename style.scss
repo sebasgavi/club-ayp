@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,800");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-@import "variables";
-@import "navegacion";
-@import "testimonials";
-@import "banner";
-@import "cards";
-
-@import '_footer';
+@import "styles/variables";
+@import "styles/navegacion";
+@import "styles/testimonials";
+@import "styles/banner";
+@import "styles/cards";
+@import 'styles/footer';
 
 *{
     margin: 0;
