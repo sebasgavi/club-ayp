@@ -1,30 +1,51 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+			<!-- EMPIEZA FOOTER -->
+			<footer class="footer">
+				<div class="footer__main-container">
+					<div class="footer__main-container__newsletter">
+						<p class="footer__main-container__newsletter__p">Mantenme al tanto de las últimas noticias de A&P</p>
+						<div class="footer__main-container__newsletter__form">
+							<input type="text" class="footer__main-container__newsletter__form__email-field">
+							<button class="footer__main-container__newsletter__form__submit-button">¡Suscribirme!</button>
+						</div>
+					</div>
+			
+					<div class="footer__main-container__powered-by">
+						<div class="footer__main-container__powered-by__title">
+							<p class="footer__main-container__powered-by__title__p">Desarrolado por</p>
+						</div>
+			
+						<hr class="footer__main-container__powered-by__divider">
+			
+						<div class="footer__main-container__powered-by__developer">
+							<div class="footer__main-container__powered-by__developer__image">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/footer/the-programming-club-logo.jpg" alt="">
+							</div>
+							<h3 class="footer__main-container__powered-by__developer__name">The Programming Club</h3>
+						</div>
+					</div>
+				</div>
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
+				<div class="footer__social-media">
+					<div class="footer__social-media__title">
+						<p class="footer__social-media__title__p">Siguenos en</p>
+					</div>
 
+					<div class="footer__social-media__item-container">
+						<div class="footer__social-media__item-container__item">
+							<img class="footer__social-media__item-container__item__img" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook-icon.png" alt="">
+						</div>
+						<div class="footer__social-media__item-container__item">
+							<img class="footer__social-media__item-container__item__img" src="<?php echo get_template_directory_uri(); ?>/img/icons/instagram-icon.png" alt="">
+						</div>
+					</div>
+				</div>
 			</footer>
-			<!-- /footer -->
-
+			<!-- TERMINA FOOTER -->
+		
 		</div>
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
-
-		<!-- analytics -->
-		<script>
-		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-		l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
-		ga('send', 'pageview');
-		</script>
 
 	</body>
 </html>
