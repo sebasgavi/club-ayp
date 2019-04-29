@@ -13,14 +13,6 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
-		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
 
 	</head>
 	<body <?php body_class(); ?>>
@@ -28,23 +20,45 @@
 		<!-- wrapper -->
 		<div class="wrapper">
 
-			<!-- header -->
-			<header class="header clear" role="banner">
+			<!-- INICIA BARRA DE NAVEGACION-->
+			<nav class="nav">
 
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
+				<header class="nav__header">
+
+					<div class="nav__header__container">
+						<div class="nav__header__container__logo">
+							<figure><img src="<?php echo get_template_directory_uri(); ?>/img/logopng.png" alt="" width="50px"></figure>
+						</div>
+						<ul class="nav__header__container__links">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Historia</a></li>
+							<li><a href="#">Equipo</a></li>
+							<li><a href="#">Proyecto</a></li>
+							<li><a href="#">Contacto</a></li>
+
+						</ul>
 					</div>
-					<!-- /logo -->
 
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
 
-			</header>
-			<!-- /header -->
+					<ul class="nav__header__contact">
+						<li><button>Donar</button></li>
+					</ul>
+
+
+					<div class="nav__header__toggle">
+						<i class="fa fa-bars menu" aria-hidden="true"></i>
+					</div>
+				</header>
+
+				<ul class="nav__column">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Historia</a></li>
+					<li><a href="#">Equipo</a></li>
+					<li><a href="#">Proyecto</a></li>
+					<li><a href="#">Contacto</a></li>
+					<li class="button"><button class="">Cotizar</button></li>
+				</ul>
+
+				</nav>
+				<!-- TERMINA BARRA DE NAVEGACION-->
+			
