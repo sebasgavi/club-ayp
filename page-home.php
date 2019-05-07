@@ -15,9 +15,9 @@
 				<!-- INICIA BANNNER-->
 				<div class="banner">
 					<div class="banner__contenedor">
-						<h1 class="banner__contenedor__titulo">Titulo Bello del Banner</h1>
+						<h1 class="banner__contenedor__titulo"><?php the_field('titulo_banner'); ?></h1>
 						<p class="banner__contenedor__parrafo">
-							<?php the_content(); ?>
+							<?php the_field('texto_banner'); ?>
 						</p>
 						<div class="banner__contenedor__boton">DONAR</div>
 					</div>
@@ -25,8 +25,35 @@
 				<!-- TERMINA BANNNER-->
 
 				
+				<!-- INICIA TESTIMONIOS-->
+				<?php if( have_rows('testimonios') ): ?>
+					<article class="container">
+						<header>
+							<h2 class="title-section">Testimonios</h2>
+						</header>
+						<section class="row">
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+							
+						<?php while ( have_rows('testimonios') ) : the_row(); ?>
+							<div class="row__column">
+								<div class="testimony">
+									<img src="<?php echo get_sub_field('imagen')['sizes']['thumbnail']; ?>" class="img-rounded"
+										alt="">
+									<h3><?php the_sub_field('nombre'); ?></h3>
+									<p>
+										<?php the_sub_field('testimonio'); ?>
+										<a href="" target="_blank">ver mas</a>
+									</p>
+								</div>
+							</div>
+
+						<?php endwhile; ?>
+
+						</section>
+					</article>
+				<?php endif; ?>
+				<!-- TERMINA TESTIMONIOS-->
+
 
 				<br class="clear">
 
