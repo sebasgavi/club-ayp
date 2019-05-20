@@ -54,9 +54,9 @@ html{
     display: flex;
 
     &__column{
-        flex-shrink: 1;
         flex-grow: 1;
-        flex-basis: auto;
+        flex-shrink: 1;
+        flex-basis: 20%;
         padding-left: 15px;
         padding-right: 15px;
     }
