@@ -1,9 +1,23 @@
 <?php
+
+
+if ( ! class_exists( 'Timber' ) ) {
+	add_action( 'admin_notices', function() {
+		echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php' ) ) . '</a></p></div>';
+	});
+	add_filter('template_include', function( $template ) {
+		return get_stylesheet_directory() . '/static/no-timber.html';
+	});
+	return;
+}
 /*
  *  Author: Todd Motto | @toddmotto
  *  URL: html5blank.com | @html5blank
  *  Custom functions, support, custom post types and more.
  */
+
+Timber::$dirname = array( 'templates', 'views' );
+
 
 /*------------------------------------*\
 	External Modules/Files
@@ -433,5 +447,28 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 {
     return '<h2>' . $content . '</h2>';
 }
+
+
+class StarterSite extends Timber\Site {
+	/** Add timber support. */
+	public function __construct() {
+		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
+		parent::__construct();
+	}
+	
+	/** This is where you add some context
+	 *
+	 * @param string $context context['this'] Being the Twig's {{ this }}.
+	 */
+	public function add_to_context( $context ) {
+		$context['foo'] = 'bar';
+		$context['stuff'] = 'I am a value set in your functions.php file';
+		$context['notes'] = 'These values are available everytime you call Timber::context();';
+		$context['menu'] = new Timber\Menu();
+		$context['site'] = $this;
+		return $context;
+	}
+}
+new StarterSite();
 
 ?>
